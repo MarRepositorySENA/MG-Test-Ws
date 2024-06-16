@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar vuelos</title>
+
+    
+    <link rel="stylesheet" href="../Assest/css/BusquedaVuelos.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <script src="../Assets/lib/node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../Assets/lib/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>Busqueda Vuelos</h1>
+        <div class="form-group">
+            <label for="origen"> origen</label>
+            <select id="origen" name ="origen">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="destino"> destino</label>
+            <select id="destino" name ="destino">
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="tipo_cabina"> Tipo Cabina</label>
+            <select id="tipo_cabina" name ="tipo_cabina">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label >Tipo de viaje</label>
+            <label ><input type="radio" name="tipo_viaje" value="retorno" checked>retorno</label>
+            <label ><input type="radio" name="tipo_viaje" value="solo_ida" checked>Solo ida</label>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha_salida">Fecha de salida</label>
+            <input type="date" id="fecha_salida" name="fecha_salida">
+        </div>
+
+        <div class="form-group">
+            <label for="fecha_regreso">Fecha de regreso</label>
+            <input type="date" id="fecha_regreso" name="fecha_regreso">
+        </div>
+
+        <div class="actions">
+            <button id="buscar_vuelos">Aplicar</button>
+        </div>
+
+        <h2>Detalle de vuelos de salida:</h2>
+        <div class="form-group">
+        <label > <input type="checkbox" id="Visualizar-antes-despues-salida">Visualizacion tres dias antes y despues</label>
+        </div>
+
+        <table id="vuelos-salida">
+        <thead>
+            <tr>
+                <th>origen</th>
+                <th>Destino</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Numero de Vuelo</th>
+                <th>Precio de Cabina</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+    <h2>detalle de vuelos de regreso:</h2>
+    <div class="form-group">
+        <label ><input type="checkbox" id="Visualizar antes-despues-regreso" checked> Visualizacion tres dias antes y despues</label>
+    </div>
+    <table id="vuelos-regreso">
+        <thead>
+            <tr>
+                <th>origen</th>
+                <th>Destino</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Numero de Vuelo</th>
+                <th>Precio de Cabina</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+    <div class="actions">
+        <label for="pasajeros">confirmar reserva para:</label>
+        <input type="text" id="pasajeros" name="pasajeros">
+        <button id="reservar-vuelo">reservar vuelo</button>
+        <button id="salir">salir</button>
+
+    </div>
+        
+
+
+
+
+    </div>
+</body>
+</html>

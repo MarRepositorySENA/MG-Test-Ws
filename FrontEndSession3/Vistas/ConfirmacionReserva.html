@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../Assets/css/ConfirmacionReserva.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <script src="../Assets/lib/node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../Assets/lib/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmación de la Reserva</h1>
+        <h2>Detalles del vuelo de salida</h2>
+        <table>
+            <tr>
+                <td><strong>Origen:</strong> CAI</td>
+                <td><strong>Destino:</strong> AUH</td>
+                <td><strong>Tipo de cabina:</strong> Económica</td>
+                <td><strong>Fecha:</strong> 11/10/17</td>
+                <td><strong>Número de vuelo:</strong> 1908</td>
+            </tr>
+        </table>
+        <h2>Detalles del vuelo de regreso</h2>
+        <table>
+            <tr>
+                <td><strong>Origen:</strong> AUH</td>
+                <td><strong>Destino:</strong> CAI</td>
+                <td><strong>Tipo de cabina:</strong> Económica</td>
+                <td><strong>Fecha:</strong> 11/15/17</td>
+                <td><strong>Número de vuelo:</strong> 1907</td>
+            </tr>
+        </table>
+        <h2>Datos del pasajero</h2>
+        <div class="form-group">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos">
+        </div>
+        <div class="form-group">
+            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+        </div>
+        <div class="form-group">
+            <label for="numero-pasaporte">Número de Pasaporte</label>
+            <input type="text" id="numero-pasaporte" name="numero-pasaporte">
+        </div>
+        <div class="form-group">
+            <label for="pais-pasaporte">País de pasaporte</label>
+            <select id="pais-pasaporte" name="pais-pasaporte">
+                <!-- Opciones de país -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono">
+        </div>
+        <div class="form-group">
+            <label for="foto-pasaporte">Foto Pasaporte</label>
+            <input type="file" id="foto-pasaporte" name="foto-pasaporte">
+        </div>
+        <div class="actions">
+            <button id="agregar-pasajero">Agregar Pasajero</button>
+        </div>
+        <h2>Lista de pasajeros</h2>
+        <table id="lista-pasajeros">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Número de pasaporte</th>
+                    <th>País de pasaporte</th>
+                    <th>Teléfono</th>
+                    <th>Foto Pasaporte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de pasajeros -->
+            </tbody>
+        </table>
+        <div class="actions">
+            <button id="eliminar-pasajero">Eliminar Pasajero</button>
+            <button id="regresar-buscar-vuelos">Regresar a buscar vuelos</button>
+            <button id="confirmar-reserva">Confirmar Reserva</button>
+        </div>
+    </div>
+</body>
+</html>
