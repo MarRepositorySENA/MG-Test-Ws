@@ -1,0 +1,38 @@
+.Filtros{
+    border: solid black 1px;
+}
+
+.form-group{
+    width: 50%;
+}
+
+span{
+    align-content: center;
+    background-color: red;
+    align-items: center;
+
+}
+
+
+
+.Filtros-2 .row {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;          
+    background-color: #f0f0f0; 
+}
+#resultSalida,#resultRegreso {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    gap: 10px;              
+}
+
+span {
+    background-color: rgb(202, 190, 190);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+}

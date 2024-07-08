@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros de busqueda</title>
+</head>
+<body>
+    
+    <div class="header"></div>
+    <div class="body">
+        <div class="form m-5" ><!--Formulario-->
+            <input type="hidden" id="id">
+
+            <div class="row mb-3">
+
+                <div class="campos col-sm-3">
+                <label for="" class="form-label mt-5">Origen</label><br>
+                <select class="form-select" id="departureAirportId" name="departureAirportId" >
+                </select>
+                </div>
+
+                <div class="campos col-sm-3">
+                    <label for="" class="form-label mt-5">selecionar Aeropuerto de Llegada</label><br>
+                    <select class="form-select" id="arrivalAirportId" name="arrivalAirportId" >
+                    </select>
+                    </div>
+
+                <div class="col-sm-3">
+                    <label for="distance" class="form-label mt-5">distancia</label>
+                    <input type="number" value="0" disabled class="form-control" id="distance">
+                </div>
+
+
+                <div class="col-sm-3">
+                    <label for="flight_time" class="form-label mt-5">Tiempo de Vuelo</label>
+                    <input type="number" class="form-control" id="flight_time" required>
+                </div>
+
+
+                    <div class="mt-2">
+                    <button class="btn btn-primary" onclick="saveRoutes()">Guardar</button>
+                    <button class="btn btn-success" onclick="updateRoutes()">Modificar</button>
+                </div>
+                
+            </div>
+        </div> 
+
+
+
+    </div>
+
+
+
+    <div class="footer"></div>
+
+
+</body>
+</html>
