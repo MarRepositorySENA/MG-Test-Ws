@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/Lib/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/Assets/Lib/node_modules/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="/Assets/Lib/node_modules/bootswatch/dist/lumen/bootstrap.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="header"></div>
+    <div class="body">
+        <div class="form m-5" ><!--Formulario-->
+            <input type="hidden" id="id">
+
+            <div class="row mb-3">
+                <div class="col-sm-4">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="makeModel" class="form-label">marca-modelo </label>
+                    <input type="text" class="form-control" id="makeModel">
+                </div>
+
+                
+                <div class="col-sm-4">
+                    <label for="totalSeats" class="form-label">Asientos Totales</label>
+                    <input type="number" value="0" disabled class="form-control" id="totalSeats">
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col-sm-4">
+                    <label for="economySeats" class="form-label">Asientos Económicos</label>
+                    <input type="number" class="form-control" id="economySeats" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="businessSeats" class="form-label">Asientos Ejecutivos</label>
+                    <input type="number" class="form-control" id="businessSeats">
+                </div>
+                <div class="col-sm-4">
+                    <label for="select" class="form-label">selecionar</label>
+                    <select name="seleccionar" id="seleccionar" >
+                        <option value="xxx">xxx</option>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <button class="btn btn-primary" onclick="saveAircrafts()">Guardar</button>
+                    <button class="btn btn-success" onclick="updateAircrafts()">Modificar</button>
+                </div>
+                
+            </div>
+        </div> 
+
+
+        
+        <div class="tabla"><!--tabla-->
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-info">
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>marca-modelo</th>
+                        <th>Asientos totales</th>
+                        <th>Asientos Economicos</th>
+                        <th>Asientos Ejecutivos</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="dataResult">
+                    
+                </tbody>
+
+            </table>
+        </div>
+
+    
+
+    </div>
+    <div class="footer"></div>
+<script src="/Assets/Lib/node_modules/sweetalert2/dist/sweetalert2.js"></script>
+<script src="/Assets/Lib/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/Assets/Lib/node_modules/jquery/dist/jquery.js"></script>    
+<script src="/Js/Logistics/Aircrafts.js"></script>
+<script>
+    loadTable();
+    select();
+</script>
+
+</body>
+
+</html>
